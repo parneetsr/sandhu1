@@ -73,7 +73,7 @@ const changeRate = (rate) => {
 };
 
 /********* Day Selection *********/
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('', () => {
   const dayElements = document.querySelectorAll('.day-selector li');
 
   dayElements.forEach((day) => {

@@ -30,14 +30,14 @@
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 
-/********* Create Variables *********/
+//Create Variables 
 const FULL_DAY_COST = 40;
 const HALF_DAY_COST = 20;
 
 let selectedDays = [];
 let currentRate = 'half';
 
-/********* Utility Functions *********/
+
 
 // Update total cost display
 const updateTotalCost = (amount) => {
@@ -72,7 +72,7 @@ const changeRate = (rate) => {
   calculateTotal();
 };
 
-/********* Day Selection *********/
+//Day Selection 
 document.addEventListener('', () => {
   const dayElements = document.querySelectorAll('.day-selector li');
 
@@ -94,7 +94,7 @@ document.addEventListener('', () => {
     });
   });
 
-  /********* Clear Days *********/
+  // Clear Days 
   const clearButton = document.getElementById('clear-button');
   clearButton.addEventListener('click', () => {
     // Remove clicked class from all days
@@ -107,7 +107,7 @@ document.addEventListener('', () => {
     changeRate('half'); 
   });
 
-  /********* Rate Buttons *********/
+  //Rate Buttons 
   const halfBtn = document.getElementById('half');
   const fullBtn = document.getElementById('full');
 
@@ -123,7 +123,7 @@ document.addEventListener('', () => {
     }
   });
 
-  /********* Initial Setup *********/
+  
   changeRate('half');      
   updateTotalCost(0);      
 });
